@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll It!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link id="lk" rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <h1>Roll It and Defeat !!!</h1>
+    <div id="rules">
+        <h2>Rules:</h2>
+        <ul>
+            <li>Player1(Red) starts the game and rolls the dice.</li>
+            <li>With each roll the number on the dice face gets added to the total score of current player.</li>
+            <li>This continues until he gets 1 on the dice.</li>
+            <li>After this its the Player2's(Blue) turn.</li>
+            <li>This continues untill any player reaches (25 in easy mode/50 in medium mode/100 in hard mode) points.</li>
+            <li>But if a player gets the unlucky three his score if reduced to half.</li>
+            <li>The first player to reach maximum score is the winner.</li>
+        </ul>
+        <button id="close">Close</button>
+    </div>
+    <div class="container">
+        <div id="p1" class="player">
+            <div id="totwin1">
+                0
+            </div>
+            <div class="name1">
+                <input id="player1" placeholder="Enter the name of Player 1" type="text">
+            </div>
+            <div id="score1">
+                0
+            </div>
+        </div>
+        <div id="img" class="img">
+            <video id="rollvid" autoplay muted loop>
+                <source id="vid" src="diceroll2">
+              </video>
+        </div>
+        <div id="p2" class="player">
+            <div id="totwin2">
+                0
+            </div>
+            <div class="name2">
+                <input id="player2" placeholder="Enter the name of Player 2" type="text">
+            </div>
+            <div id="score2">
+                0
+            </div>
+        </div>
+    </div>
+    <div id="message">
+        <button id="Playagain">Playagain</button>
+        <button id="No">No</button>
+    </div>
+    <button id="Start">START</button>
+    <div id="mode">
+        <button id="easy">Easy(Target score=25)</button>
+        <button id="med">Medium(Target score=50)</button>
+        <button id="hard">Hard(Target score=100)</button>
+    </div>
+    <div class="btn">
+        <button id="Help">Help!</button>
+        <button id="Quit">Quit</button>
+        <button id="Mode">Mode</button>
+    </div>
+    <div id="mode">
+        <button id="easy">Easy(Target score=25)</button>
+        <button id="med">Medium(Target score=50)</button>
+        <button id="hard">Hard(Target score=100)</button>
+    </div>
+    <audio src="dicerollaudio.mp3" id="dicesound"></audio>
+    <audio src="positivesound.wav" id="psound"></audio>
+    <audio src="negativesound.wav" id="nsound"></audio>
+    <audio src="winner.wav" id="win"></audio>
+    <audio src="losehalf.mp3" id="losehalf"></audio>
+    <script src="game.js"></script>
+</body>
+
+</html>
